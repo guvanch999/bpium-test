@@ -4,8 +4,9 @@ module.exports = {
     async preHook(request, response) {
         const data = request.body
 
-        console.log(data.payload)
+        data.payload.values["3"] = "this will changed"
 
-        return response.status(200).json(request.body)
+
+        return response.status(200).json(data)
     }
 }
