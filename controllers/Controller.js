@@ -6,6 +6,7 @@ module.exports = {
 
         data.payload.values["3"] = "this will changed"
 
+        console.log(data.payload)
 
         return response.status(200).json(data)
     }
