@@ -49,7 +49,7 @@ module.exports = {
             "4": comment
         }
 
-        let data = await service.createRecord(values)
+        let data =values; //await service.createRecord(values)
 
         return response.status(200).json(data)
     }
