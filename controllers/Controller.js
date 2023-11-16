@@ -5,7 +5,7 @@ module.exports = {
         const data = request.body
 
         data.payload.values["3"] = "this will changed"
-
+        await service.getCommentMessage()
 
         let res = {
             "message": { // опционально, string или object{title, text}
