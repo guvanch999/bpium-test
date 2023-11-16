@@ -37,7 +37,7 @@ module.exports = {
         const created_record = request.body
 
         const comment = created_record.payload.values["3"]
-        const recordId = created_record.payload.recordId
+        const recordId = parseInt(created_record.payload.recordId)
         let values = {
             "2": new Date().toISOString(),
             "3": [
