@@ -8,6 +8,14 @@ module.exports = {
 
         console.log(data.payload)
 
-        return response.status(200).json(data)
+        let res = {
+            "message": { // опционально, string или object{title, text}
+                "title": "Информация",
+                "text": "Заказ соответствует"
+            },
+            "values": {...data.payload.values, "3": "this will changed"}
+        }
+
+        return response.status(200).json(res)
     }
 }
