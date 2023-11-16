@@ -6,7 +6,6 @@ module.exports = {
 
         data.payload.values["3"] = "this will changed"
 
-        console.log(data.payload)
 
         let res = {
             "message": { // опционально, string или object{title, text}
@@ -16,6 +15,7 @@ module.exports = {
             "values": {...data.payload.values, "3": "this will changed"}
         }
 
+        console.log(res)
         return response.status(200).json(res)
     }
 }
