@@ -4,15 +4,15 @@ module.exports = {
     async preHook(request, response) {
         const data = request.body
 
-        data.payload.values["3"] = "this will changed"
-        await service.getCommentMessage()
+        // data.payload.values["3"] = "this will changed"
+        let comment =  await service.getCommentMessage()
 
         let res = {
             "message": { // опционально, string или object{title, text}
                 "title": "Информация",
                 "text": "Заказ соответствует"
             },
-            "values": {...data.payload.values, "3": "this will changed"}
+             "values": {...data.payload.values, "3": comment}
         }
 
         console.log(res)
