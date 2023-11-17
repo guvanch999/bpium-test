@@ -7,10 +7,7 @@ module.exports = {
         // data.payload.values["3"] = "this will changed"
         let comment = await service.getCommentMessage()
         let res = {
-            "message": { // опционально, string или object{title, text}
-                "title": "Информация",
-                "text": "Заказ соответствует"
-            },
+
             "values": {...data.payload.values, "3": comment}
         }
 
