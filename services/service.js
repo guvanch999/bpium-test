@@ -5,7 +5,7 @@ const bp = new BP("testa-procat.bpium.ru", "guvanch.d.1999@gmail.com", "fib11235
 
 module.exports = {
     async getCommentMessage() {
-        const {data} = await axios.get('http://127.0.0.1:8475/api/webrequest/request')
+        const {data} = await axios.get('https://test.bpium.ru/api/webrequest/request')
         return data.value
     },
     async login() {
