@@ -49,8 +49,8 @@ module.exports = {
             "4": comment
         }
 
-        let data = values; //await service.createRecord(values)
-        console.log(data)
+        let data = await service.createRecord(values)
+
         return response.status(200).json(data)
     }
 }
