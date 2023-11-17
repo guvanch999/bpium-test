@@ -20,5 +20,8 @@ module.exports = {
     },
     async createRecord(values) {
         return await bp.postRecord(14, values)
+    },
+    async createOrder(values) {
+        return await bp.postRecord(13, values)
     }
 }
